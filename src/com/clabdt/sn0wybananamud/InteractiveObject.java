@@ -7,7 +7,7 @@ public class InteractiveObject {
 	public InteractiveObject(int id, String name){
 		name = this.name;
 		id = this.id;
-		customActions = new ArrayList<MUDAction>(100);
+		customActions = new ArrayList<MUDAction>(MUDConstants.maxElements);
 	}
 	
 	public void registerCustomAction(int id, String name, String action) {
