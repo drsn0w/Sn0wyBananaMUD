@@ -23,66 +23,58 @@ public class Room {
 	public String getName() {
 		return roomName;
 	}
+
 	
-	public int addConnectionNorth(int connection) {
-		if (this.isConnectedNorth()) return -1;
-		
-		north = connection;
-		
-		// IMPLEMENT DOORS
-		
-		return 1;
-		
+	public int addConnection(String direction, int connection) {
+		switch (direction) {
+			case "north":
+				if (this.isConnected(direction)) return -1;
+				north = connection;
+				return 1;
+				
+			case "south":
+				if (this.isConnected(direction)) return -1;
+				south = connection;
+				return 1;
+				
+			case "east":
+				if (this.isConnected(direction)) return -1;
+				east = connection;
+				return 1;
+			
+			case "west":
+				if (this.isConnected(direction)) return -1;
+				west = connection;
+				return 1;
+			
+			default:
+				return -1;
+				
+		}
 	}
 	
-	public int addConnectionEast(int connection) {
-		if (this.isConnectedEast()) return -1;
-		
-		east = connection;
-	
-		return 1;
-	}
-	
-	public int addConnectionWest(int connection) {
-		if (this.isConnectedWest()) return -1;
-		
-		west = connection;
-		
-		return 1;
-		
-	}
-	
-	public int addConnectionSouth(int connection) {
-		if (this.isConnectedSouth()) return -1;
-		
-		south = connection;
-		
-		return 1;
-		
-	}
-	
-	public boolean isConnectedNorth() {
-		if (north == 0) return false;
-		else return true;
-		
-		
-	}
-	
-	public boolean isConnectedEast() {
-		if (east == 0) return false;
-		else return true;
-		
-	}
-	
-	public boolean isConnectedWest() {
-		if (west == 0) return false;
-		else return true;
-		
-	}
-	
-	public boolean isConnectedSouth() {
-		if (south == 0) return false;
-		else return true;
+	public boolean isConnected(String direction) {
+		switch (direction) {
+			case "north":
+				if (north == 0) return false;
+				else return true;
+			
+			case "south":
+				if (south == 0) return false;
+				else return true;
+				
+			case "east":
+				if (east == 0) return false;
+				else return true;
+				
+			case "west":
+				if (west == 0) return false;
+				else return true;
+				
+			default:
+				return false;
+		}
+			
 	}
 	
 	
