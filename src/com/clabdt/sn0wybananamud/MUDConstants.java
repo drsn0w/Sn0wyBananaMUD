@@ -4,7 +4,9 @@ public class MUDConstants {
 	//Constant settings
 	
 	//Maximum number of elements in lists
-	final public static int maxElements = 1024;
+	
 	
 	private MUDConstants() {}
+	
+	public static final int MAX_ELEMENTS = 1024;
 }

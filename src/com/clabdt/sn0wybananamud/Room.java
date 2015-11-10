@@ -11,8 +11,8 @@ public class Room {
 		roomID = id;
 		roomName = name;
 		// In future, read this from a file
-		interactiveObjects = new ArrayList<InteractiveObject>(MUDConstants.maxElements);
-		nonPlayableCharacters = new ArrayList<NonPlayableCharacter>(MUDConstants.maxElements);
+		interactiveObjects = new ArrayList<InteractiveObject>(MUDConstants.MAX_ELEMENTS);
+		nonPlayableCharacters = new ArrayList<NonPlayableCharacter>(MUDConstants.MAX_ELEMENTS);
 		
 		north = 0;
 		south = 0;

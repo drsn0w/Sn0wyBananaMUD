@@ -11,7 +11,7 @@ public class Universe {
 		id = this.id;
 		name = this.name;
 		// In future, read this from a file
-		rooms = new ArrayList<Room>(MUDConstants.maxElements);
+		rooms = new ArrayList<Room>(MUDConstants.MAX_ELEMENTS);
 	}
 	
 	public void addRoom(int id, String name) {
